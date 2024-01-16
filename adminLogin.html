@@ -15,20 +15,36 @@
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+  <script>
+    function login(){
+      let username = document.getElementById("uname").value;
+      let password = document.getElementById("pw").value;
+
+      if(username === "user@gmail.com" && password === "12345"){
+
+        document.getElementById("form").action = "admin.html";
+
+      } else{
+        alert("username atau password salah!");
+      }
+
+    }
+  </script>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a class="h3"><b>Login Sistem Direktori Mesjid</b></a>
+      <a href="index3.html" class="h3"><b>Login Sistem Direktori Mesjid</b></a>
     </div>
     <div class="card-body">
 
-      <form method="post">
+      <form method="post" id="form">
         <label>Username</label>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Masukkan username" required id="admlog">
+          <input type="text" class="form-control" placeholder="user@gmail.com" required id="uname">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -37,7 +53,7 @@
         </div>
         <label>Password</label>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Masukkan password" required id="passlog">
+          <input type="password" class="form-control" placeholder="12345" required id="pw">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
